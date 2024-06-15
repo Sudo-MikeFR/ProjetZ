@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox  # Importer messagebox pour la confirmation
 from Classes import clients
-
+from menu_creation import MenuCreation  # Importer la fenêtre de création
 
 class MenuGestion:
     def __init__(self, master, menu_principal):
@@ -42,7 +42,8 @@ class MenuGestion:
         self.button_retour.pack(side=tk.RIGHT, padx=10, pady=10)
 
     def creer(self):
-        print("bravo")
+        new_window = tk.Toplevel(self.master)
+        self.app = MenuCreation(new_window, self)
 
     def modifier(self):
         print("bravo")
@@ -56,8 +57,16 @@ class MenuGestion:
         reponse = messagebox.askyesno("Confirmation",
                                       f"Voulez-vous vraiment supprimer {utilisateur[0]} {utilisateur[1]}?")
         if reponse:
+            # Supprimer de la Treeview
             self.tree.delete(selected_item)
-            print(f"Utilisateur {utilisateur[0]} {utilisateur[1]} supprimé.")
+
+            # Supprimer de la liste des clients dans la classe
+            for client in clients[:]:
+                if client.nom == utilisateur[0] and client.prenom == utilisateur[1] and client.courriel == utilisateur[
+                    2]:
+                    clients.remove(client)
+                    print(f"Utilisateur {client.nom} {client.prenom} supprimé de la liste des clients.")
+                    break
 
     def retour(self):
         self.master.destroy()
