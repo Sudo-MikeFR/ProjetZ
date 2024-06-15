@@ -71,9 +71,13 @@ clients = [
 # Exemple de films
 films = [
     Film(nom_film="Inception", duree_film="2h28m", description_film="A mind-bending thriller"),
-    Film(nom_film="The Matrix", duree_film="2h16m", description_film="A science fiction classic")
+    Film(nom_film="The Matrix", duree_film="2h16m", description_film="A science fiction classic"),
+    Film(nom_film="test", duree_film="2h33m", description_film="test"),
+    Film(nom_film="test4", duree_film="2h56m", description_film="Bon film")
 ]
 
 # Ajout de catégories à ces films
 films[0].categories.append(Categorie(nom_categorie="Thriller", description_categorie="A thrilling movie"))
 films[1].categories.append(Categorie(nom_categorie="Science Fiction", description_categorie="A sci-fi movie"))
+films[2].categories.append(Categorie(nom_categorie="test2", description_categorie="qweq"))
+films[3].categories.append(Categorie(nom_categorie="test5", description_categorie="sasd"))
