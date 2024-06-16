@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd1768ed-250b-4304-933c-34289f4355e8" name="Changes" comment="Nouveau Projet">
-      <change afterPath="$PROJECT_DIR$/Projet/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projet/menu_connexion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projet/menu_films.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projet/menu_gestion.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projet/menu_principal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projet/Menu_Quitter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projet/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/Classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_cartes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_cartes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_connexion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_connexion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_films.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_films.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_gestion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_gestion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_modification.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_modification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projet/menu_principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_principal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +48,10 @@
     "Python.Menu_Connexion.executor": "Run",
     "Python.main.executor": "Run",
     "Python.menu_connexion.executor": "Run",
+    "Python.menu_creation.executor": "Run",
     "Python.menu_films.executor": "Run",
     "Python.menu_gestion.executor": "Run",
+    "Python.menu_modification.executor": "Run",
     "Python.menu_principal.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
@@ -75,7 +81,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718456119726</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nouveau Projet">
+      <option name="closed" value="true" />
+      <created>1718461191012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718461191012</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Nouveau Projet">
+      <option name="closed" value="true" />
+      <created>1718465713071</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718465713071</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Nouveau Projet">
+      <option name="closed" value="true" />
+      <created>1718544095735</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718544095735</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

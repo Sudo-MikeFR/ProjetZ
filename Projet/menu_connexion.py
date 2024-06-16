@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from Classes import exemple_employe
 from menu_principal import MenuPrincipal
+from Menu_Quitter import menuquitter
 
 ####MENU POUR LA CONNEXION, Prends les informations de connexion de employe, s'assure que c'est le bon.
 #Compte : admin/admin ou test/test  Admin = Modifie , Test = Lecture, Les menus ne seront pas les mêmes pour les deux utilisateurs

@@ -2,8 +2,13 @@ import tkinter as tk
 from tkinter import messagebox
 from datetime import datetime
 from Classes import clients, Client, CarteCredit
+from Menu_Quitter import menuquitter
 
+
+## disposition de la fenetre
 class MenuModification:
+    ## il faut avoir avoir le client ainsi que le choix de la personne pour marqué les bonnes informations dans les champs
+    ##prends les informations dans menu_gestion
     def __init__(self, master, menu_gestion, client):
         self.master = master
         self.menu_gestion = menu_gestion
@@ -79,6 +84,7 @@ class MenuModification:
         self.button_fermer = tk.Button(master, text="Fermer", command=self.master.destroy)
         self.button_fermer.grid(row=10, column=1)
 
+        ##remplir les différentes sections
     def modifier(self):
         nom = self.entry_nom.get()
         prenom = self.entry_prenom.get()
@@ -90,23 +96,23 @@ class MenuModification:
         date_expire = self.entry_date_expire.get()
         code_carte = self.entry_code_carte.get()
 
-        # Validation des champs
+        # Validation des champs (même validation que la creation)
         if not nom or not prenom or not sexe or not date_inscription or not courriel or not mot_de_passe or not numero_carte or not date_expire or not code_carte:
             messagebox.showerror("Erreur", "Tous les champs doivent être remplis.")
             return
-
+        ## si le sexe n'est pas : {"F", "M", "f", "m"}: , message d'erreur
         if sexe not in {"F", "M", "f", "m"}:
             messagebox.showerror("Erreur", "Le sexe doit être M ou F.")
             return
-
+        ### si la date n'est pas dans le bon format , (def plus bas) , la date doit être dans le format YYYY-MM-DD
         if not self.valider_date_inscription(date_inscription):
             messagebox.showerror("Erreur", "La date d'inscription doit être au format YYYY-MM-DD.")
             return
-
+        ###si le mot de passe est en bas de 8 caractères
         if len(mot_de_passe) < 8:
             messagebox.showerror("Erreur", "Le mot de passe doit contenir au moins 8 caractères.")
             return
-
+        ### voit si le courriel est unique (def plus bas), s'il existe dans la liste de client, message d'erreur
         if not self.courriel_unique(courriel, self.client):
             messagebox.showerror("Erreur", "Le courriel doit être unique.")
             return
@@ -114,11 +120,11 @@ class MenuModification:
         if not numero_carte.isdigit() or len(numero_carte) != 8:
             messagebox.showerror("Erreur", "Le numéro de carte doit être un nombre de 8 chiffres.")
             return
-
+        ### valide la date (def plus bas) attent le format mm/aa (utilise datetime)
         if not self.valider_date_expire(date_expire):
             messagebox.showerror("Erreur", "La date d'expiration doit être au format MM/AA.")
             return
-
+        ###si les codes n'est pas des chiffres et est plus petit que 3
         if not code_carte.isdigit() or len(code_carte) != 3:
             messagebox.showerror("Erreur", "Le code de la carte doit être un nombre de 3 chiffres.")
             return
@@ -139,15 +145,21 @@ class MenuModification:
             self.client.cartes_credit.append(CarteCredit(numero_carte, date_expire, code_carte))
 
         # Mettre à jour la liste des clients dans menu_gestion
+        # Boucle à travers tous les clients pour trouver le client actuel
         for i, client in enumerate(clients):
+            # Vérifie si le courriel du client dans la liste correspond à celui du client modifié
             if client.courriel == self.client.courriel:
+                # Si une correspondance est trouvée, met à jour ce client dans la liste avec les nouvelles informations
                 clients[i] = self.client
+                # Sort de la boucle une fois le client mis à jour
                 break
-
+            ## MAJ de la liste dans menu_gestion
+        self.menu_gestion.update_tree()  # Mettre à jour la Treeview
         self.menu_gestion.tree.item(self.menu_gestion.tree.selection()[0], values=(nom, prenom, courriel))
         messagebox.showinfo("Succès", "Client modifié avec succès.")
         self.master.destroy()
 
+        ### s'assurer que la date est dans le bon format '%Y-%m-%d utilise datetime
     def valider_date_inscription(self, date_inscription):
         try:
             datetime.strptime(date_inscription, '%Y-%m-%d')
@@ -155,6 +167,7 @@ class MenuModification:
         except ValueError:
             return False
 
+    ### s'assurer que la date est dans le bon format '%m/%y' utilise datetime
     def valider_date_expire(self, date_expire):
         try:
             datetime.strptime(date_expire, '%m/%y')
@@ -162,6 +175,7 @@ class MenuModification:
         except ValueError:
             return False
 
+    #### vérifie si le courriel n'existe pas dans les clients
     def courriel_unique(self, courriel, current_client):
         for client in clients:
             if client.courriel == courriel and client != current_client:
