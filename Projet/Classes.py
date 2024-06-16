@@ -1,5 +1,8 @@
 from typing import List
-from datetime import *
+
+### Toutes les classes et les exemples de clients, acteurs, films, employe sont aussi ici --->
+
+
 # Classe de base représentant une personne
 class Personne:
     def __init__(self, nom: str, prenom: str, sexe: str):
@@ -24,7 +27,6 @@ class Acteur(Personne):
         self.date_fin_emploi = date_fin_emploi  # Date de fin d'emploi
         self.nom_personnage = nom_personnage  # Nom du personnage joué
         self.salaire = salaire  # Salaire de l'acteur
-        self.films: List[Film] = []  # Liste des films
 
 # Classe Employe héritant de Personne
 class Employe(Personne):
@@ -49,6 +51,7 @@ class Film:
         self.duree_film = duree_film  # Durée du film
         self.description_film = description_film  # Description du film
         self.categories: List[Categorie] = []  # Liste des catégories
+        self.acteur: List[Acteur] = [] # Liste des acteurs
 
 # Classe représentant une catégorie de film
 class Categorie:
@@ -81,3 +84,12 @@ films[0].categories.append(Categorie(nom_categorie="Thriller", description_categ
 films[1].categories.append(Categorie(nom_categorie="Science Fiction", description_categorie="A sci-fi movie"))
 films[2].categories.append(Categorie(nom_categorie="test2", description_categorie="qweq"))
 films[3].categories.append(Categorie(nom_categorie="test5", description_categorie="sasd"))
+
+## Ajout d'exemple carte de crédit
+clients[1].cartes_credit.append((CarteCredit("12345678","11/11","123")))
+
+#ajout d'acteur dans film ainsi que des exemples :
+films[1].acteur.append((Acteur(nom="DiCaprio", prenom="Leonardo", sexe="M", date_debut_emploi="2010-07-16", date_fin_emploi="", nom_personnage="Dom Cobb", salaire="20000000")))
+films[2].acteur.append((Acteur(nom="Reeves", prenom="Keanu", sexe="M", date_debut_emploi="1999-03-31", date_fin_emploi="", nom_personnage="Neo", salaire="15000000")))
+films[3].acteur.append((Acteur(nom="DiCaprio", prenom="Leonardo", sexe="M", date_debut_emploi="2010-07-16", date_fin_emploi="", nom_personnage="Dom Cobb", salaire="20000000")))
+films[0].acteur.append((Acteur(nom="Reeves", prenom="Keanu", sexe="M", date_debut_emploi="1999-03-31", date_fin_emploi="", nom_personnage="Neo", salaire="15000000")))

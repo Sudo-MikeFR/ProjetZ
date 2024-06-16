@@ -34,7 +34,8 @@ class MenuFilms:
                 f"Nom: {film_selectionne.nom_film}\n"
                 f"Durée: {film_selectionne.duree_film}\n"
                 f"Description: {film_selectionne.description_film}\n"
-                f"Catégories: {', '.join(cat.nom_categorie for cat in film_selectionne.categories)}"
+                f"Catégories: {', '.join(cat.nom_categorie for cat in film_selectionne.categories)}\n"
+                f"Acteurs: {', '.join(f'{acteur.prenom} {acteur.nom}' for acteur in film_selectionne.acteur)}"
             )
             self.afficher_fenetre_details(details)
 
