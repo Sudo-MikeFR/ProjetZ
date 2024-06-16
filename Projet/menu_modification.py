@@ -154,8 +154,8 @@ class MenuModification:
                 # Sort de la boucle une fois le client mis à jour
                 break
             ## MAJ de la liste dans menu_gestion
-        self.menu_gestion.update_tree()  # Mettre à jour la Treeview
         self.menu_gestion.tree.item(self.menu_gestion.tree.selection()[0], values=(nom, prenom, courriel))
+        self.menu_gestion.update_tree()  # Mettre à jour la Treeview
         messagebox.showinfo("Succès", "Client modifié avec succès.")
         self.master.destroy()
 
@@ -174,8 +174,7 @@ class MenuModification:
             return True
         except ValueError:
             return False
-
-    #### vérifie si le courriel n'existe pas dans les clients
+### vérifie si le courriel est unique
     def courriel_unique(self, courriel, current_client):
         for client in clients:
             if client.courriel == courriel and client != current_client:
