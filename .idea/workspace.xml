@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd1768ed-250b-4304-933c-34289f4355e8" name="Changes" comment="Nouveau Projet">
-      <change afterPath="$PROJECT_DIR$/Projet/Menu_Quitter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projet/test_application.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/Classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/Classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_cartes.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_cartes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_connexion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_connexion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_films.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_films.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_gestion.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_gestion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_modification.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_modification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet/menu_principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/Projet/menu_principal.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests in test_application.py.executor": "Run",
     "Python.Classes.executor": "Run",
     "Python.Menu_Connexion.executor": "Run",
     "Python.main.executor": "Run",
@@ -105,7 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718544095735</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Nouveau Projet">
+      <option name="closed" value="true" />
+      <created>1718551604577</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718551604577</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Nouveau Projet">
+      <option name="closed" value="true" />
+      <created>1718552035959</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718552035959</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
